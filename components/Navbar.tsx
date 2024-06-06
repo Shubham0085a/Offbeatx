@@ -1,21 +1,16 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { logo } from "@/public/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { TbBrandGithub } from "react-icons/tb";
-import { SlSocialYoutube } from "react-icons/sl";
-import {
-  SlSocialLinkedin,
-  SlSocialFacebook,
-  SlSocialInstagram,
-} from "react-icons/sl";
+import { SlSocialYoutube, SlSocialLinkedin, SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
 import { MdOutlineClose } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const ref = useRef<string | any>("");
+  const ref = useRef<HTMLDivElement | null>(null);
   const [show, setShow] = useState(false);
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setShow(false);
@@ -34,21 +29,17 @@ const Navbar = () => {
   };
 
   function handleClick(e: any) {
-    if (e.target.contains(ref.current)) {
-      // do something with myRef.current
+    if (ref.current && !ref.current.contains(e.target)) {
       setShow(false);
     }
   }
+
   return (
     <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4">
-      <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between ">
+      <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">
         {/* ============ Logo Start here ============ */}
         <Link href="/">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.1 }}
-          >
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.1 }}>
             <Image className="w-14" src={logo} alt="logo" />
           </motion.div>
         </Link>
@@ -61,15 +52,10 @@ const Navbar = () => {
               href="#home"
               onClick={handleScroll}
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1 }}
-              >
+              <motion.li initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.1 }}>
                 Home
               </motion.li>
             </Link>
-
             <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               href="#about"
@@ -149,9 +135,11 @@ const Navbar = () => {
         </div>
         {show && (
           <div
-            ref={(node) => (ref.current = node)}
+            ref={(node) => {
+              ref.current = node;
+            }}
             onClick={handleClick}
-            className="absolute mdl:hidden top-0 right-0 w-full h-screen  bg-black bg-opacity-50 flex flex-col items-end"
+            className="absolute mdl:hidden top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex flex-col items-end"
           >
             <motion.div
               initial={{ x: 20, opacity: 0 }}
@@ -178,7 +166,6 @@ const Navbar = () => {
                       Home
                     </motion.li>
                   </Link>
-
                   <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                     href="#about"
@@ -318,7 +305,6 @@ const Navbar = () => {
           </div>
         )}
         {/* ============== Small Icon End here ============= */}
-
         {/* ============ ListItem End here ========== */}
       </div>
     </div>
