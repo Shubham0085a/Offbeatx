@@ -5,23 +5,23 @@ const Banner = () => {
       id="home"
       className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
-      <motion.h3
+      {/* <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
         className="text-lg font-titleFont tracking-wide text-textGreen"
       >
         Hi, my name is
-      </motion.h3>
+      </motion.h3> */}
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
       >
-        Noor Mohammad.
-        <span className="text-textDark mt-2 lgl:mt-4">
-          I build things for the web.
+        Offbeat Technet
+        <span className="text-textDark text-3xl lgl:text-5xl mt-2 lgl:mt-4">
+        Innovating solutions for the unorganized sector.
         </span>
       </motion.h1>
       <motion.p
@@ -30,11 +30,9 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        I am a web developer with 4+ years of experience in React. I have a
-        strong foundation in front-end & back-end development and am skilled in
-        creating user-friendly and responsive web applications using React and
-        its ecosystem.{" "}
-        <a href="https://www.noormohammad.live/" target="_blank">
+        In the ever-evolving landscape of technology, Offbeat TechNet Pvt Ltd emerges as a trailblazing startup, specifically
+        dedicated to addressing the unique and innovative challenges for the Unorganized Sector.<br/>{" "}
+        <a href="" target="_blank">
           {" "}
           <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
             Learn more
@@ -42,7 +40,7 @@ const Banner = () => {
           </span>
         </a>
       </motion.p>
-      <a href="https://github.com/noorjsdivs" target="_blank">
+      {/* <a href="https://github.com/noorjsdivs" target="_blank">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -51,7 +49,7 @@ const Banner = () => {
         >
           Check out my project!
         </motion.button>
-      </a>
+      </a> */}
     </section>
   );
 };

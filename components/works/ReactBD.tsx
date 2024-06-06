@@ -10,34 +10,40 @@ const ReactBD = () => {
       className="w-full"
     >
       <h3 className="flex gap-1 font-medium text-xl font-titleFont">
-        Engineer
-        <span className="text-textGreen tracking-wide">@ReactBD</span>
+        Antony SJ
       </h3>
-      <p className="text-sm mt-1 font-medium text-textDark">
-        Jan 2023 - present
-      </p>
+      <p className="text-sm mt-1 font-medium text-textDark">Founder / <span className="text-textGreen tracking-wide">CEO</span></p>
       <ul className="mt-6 flex flex-col gap-3">
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Write modern, performant, maintainable code for a diverse array of
-          client and internal projects
+          Antony is a seasoned entrepreneur in the HoReCa industry, with over 15
+          years of experience.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Work with a variety of different languages, platforms, frameworks, and
-          content management systems such as JavaScript, TypeScript, Gatsby,
-          React, Craft, WordPress, Prismic, and Netlify
+          Coming from an IT background, he s a pro at managing operations and
+          keeping costs in check to boost profits. Besides running his own
+          cafe/restaurant, he also offers consultancy services to HoReCa
+          businesses aiming to optimize their operations.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Communicate with multi-disciplinary teams of engineers, designers,
-          producers, and clients on a daily basis
+          He s known for his stellar results in strategy development, cost
+          control, budget planning, and leading teams.
+        </li>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-textGreen mt-1">
+            <TiArrowForward />
+          </span>
+          His innovative approach has a proven track record of driving growth
+          and success, making him a valuable asset for any organization looking
+          to improve operations and profitability.
         </li>
       </ul>
     </motion.div>

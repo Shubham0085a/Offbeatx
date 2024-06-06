@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* ============ Logo Start here ============ */}
         <Link href="/">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.1 }}>
-            <Image className="w-14" src={logo} alt="logo" />
+            <Image className="w-48" src={logo} alt="logo" />
           </motion.div>
         </Link>
         {/* ============ Logo End here ============== */}
@@ -66,7 +66,6 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.1 }}
               >
-                <span className="text-textGreen">01.</span>
                 About
               </motion.li>
             </Link>
@@ -80,7 +79,6 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
               >
-                <span className="text-textGreen">02.</span>
                 Experience
               </motion.li>
             </Link>
@@ -94,7 +92,6 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
               >
-                <span className="text-textGreen">03.</span>
                 Project
               </motion.li>
             </Link>
@@ -108,12 +105,11 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
               >
-                <span className="text-textGreen">04.</span>
                 Contact
               </motion.li>
             </Link>
           </ul>
-          <a href="/assets/noor_resume.pdf" target="_blank">
+          {/* <a href="/assets/noor_resume.pdf" target="_blank">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -122,7 +118,7 @@ const Navbar = () => {
             >
               Resume
             </motion.button>
-          </a>
+          </a> */}
         </div>
         {/* ============== Small Icon Start here =========== */}
         <div
@@ -176,7 +172,6 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.2, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">01.</span>
                       About
                     </motion.li>
                   </Link>
@@ -190,7 +185,6 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">02.</span>
                       Experience
                     </motion.li>
                   </Link>
@@ -204,7 +198,6 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.4, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">03.</span>
                       Project
                     </motion.li>
                   </Link>
@@ -218,12 +211,11 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.5, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">04.</span>
                       Contact
                     </motion.li>
                   </Link>
                 </ul>
-                <a href="/assets/noor_resume.pdf" target="_blank">
+                {/* <a href="/assets/noor_resume.pdf" target="_blank">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -232,7 +224,7 @@ const Navbar = () => {
                   >
                     Resume
                   </motion.button>
-                </a>
+                </a> */}
                 <div className="flex gap-4">
                   <motion.a
                     initial={{ y: 20, opacity: 0 }}
